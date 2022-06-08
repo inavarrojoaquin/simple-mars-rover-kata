@@ -18,22 +18,13 @@ namespace SimpleMarsRover
         #endregion
 
         #region Movement (M) to the North (N)
-        [Test]
-        public void MoveOnePositionToNorth()
+        [TestCase("M", "0:1:N")]
+        [TestCase("MM", "0:2:N")]
+        [TestCase("MMM", "0:3:N")]
+        [TestCase("MMMM", "0:4:N")]
+        public void MoveOnePositionToNorthFromStartingPosition(string input, string expected)
         {
-            Assert.AreEqual("0:1:N", new MarsRover().Execute("M"));
-        }
-
-        [Test]
-        public void MoveTwoPositionsToNorth()
-        {
-            Assert.AreEqual("0:2:N", new MarsRover().Execute("MM"));
-        }
-
-        [Test]
-        public void MoveThreePositionsToNorth()
-        {
-            Assert.AreEqual("0:3:N", new MarsRover().Execute("MMM"));
+            Assert.AreEqual(expected, new MarsRover().Execute(input));
         }
 
         #endregion
