@@ -8,11 +8,7 @@ namespace SimpleMarsRover
         {
             if(string.IsNullOrEmpty(input)) return "0:0:N";
 
-            if (input.Length == 1) return "0:1:N";
-
-            if (input.Length == 2) return "0:2:N";
-
-            return "0:3:N";
+            return string.Format("0:{0}:N", input.Length);
         }
     }
 }
