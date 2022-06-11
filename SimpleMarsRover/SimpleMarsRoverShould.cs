@@ -49,5 +49,27 @@ namespace SimpleMarsRover
             Assert.AreEqual(expected, new MarsRover().Execute(input));
         }
         #endregion
+
+        #region -> Move position and turns to any direction
+        [TestCase("MR", "0:1:E")]
+        [TestCase("MMRR", "0:2:S")]
+        [TestCase("ML", "0:1:W")]
+        [TestCase("MMLL", "0:2:S")]
+        public void MovePositionAndTurnDirectionFromStartingPosition(string input, string expected)
+        {
+            Assert.AreEqual(expected, new MarsRover().Execute(input));
+        }
+        #endregion
+
+        #region -> Turn to any direction and Move position
+        [TestCase("RM", "1:0:E")]
+        [TestCase("RMMLM", "2:1:N")]
+        [TestCase("MRMMLLM", "1:1:W")]
+        [TestCase("MRMMLLML", "1:1:S")]
+        public void TurnDirectionAndMovePositionFromStartingPosition(string input, string expected)
+        {
+            Assert.AreEqual(expected, new MarsRover().Execute(input));
+        }
+        #endregion
     }
 }

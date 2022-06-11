@@ -15,13 +15,13 @@ Scenarios
 -> Movement (M)
 -> Turns direction to Left (L)
 -> Turns direction to Right (R)
+-> Movement and Turn to any Direction
+-> Turn to any Direction and Movement
 
 -> North direction (N)
 -> South direction (S)
 -> East direction  (E)
 -> West direction  (W)
-
-
 
 ### Example
 
