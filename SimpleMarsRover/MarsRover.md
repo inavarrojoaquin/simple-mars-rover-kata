@@ -12,12 +12,16 @@ The rover receives a char array of commands e.g. RMMLM and returns the finishing
 
 Scenarios
 -> The starting position 0:0:N
--> Movement (M) to the North (N)
--> Movement (M) to the South (S)
--> Movement (M) to the East (E)
--> Movement (M) to the West (W)
+-> Movement (M)
 -> Turns direction to Left (L)
 -> Turns direction to Right (R)
+
+-> North direction (N)
+-> South direction (S)
+-> East direction  (E)
+-> West direction  (W)
+
+
 
 ### Example
 

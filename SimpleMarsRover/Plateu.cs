@@ -5,19 +5,25 @@ namespace SimpleMarsRover
     internal class Plateu
     {
         private Position position;
-
-        public string[,] Board { get; }
-        public string Direction { get; }
-
+        private Direction direction;
+        private string[,] board;
+        
         public Plateu()
         {
-            Board = CreateBoard();
-            Direction = "N";
+            board = CreateBoard();
+            direction = new Direction();
+            position = new Position(0, 0);
         }
 
         internal void Move(string input)
         {
-            position = new Position(0, input.Length);
+            if (input.Length == 0) return;
+            
+            for (var i = 0; i < input.Length; i++) 
+            {
+                if (input[i] == 'M') position = new Position(0, position.Y + 1);
+                if (input[i] == 'R') direction.TurnRight();
+            }
         }
 
         private string[,] CreateBoard()
@@ -37,7 +43,7 @@ namespace SimpleMarsRover
 
         public string Print()
         {
-            return Board[position.X, position.Y].ToString() + ":" + Direction;
+            return board[position.X, position.Y].ToString() + ":" + direction.Name;
         }
     }
 }

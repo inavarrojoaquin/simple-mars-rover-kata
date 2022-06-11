@@ -17,20 +17,26 @@ namespace SimpleMarsRover
         }
         #endregion
 
-        #region Movement (M) to the North (N)
+        #region Movement (M) from start position so final Direction keeps North
         [TestCase("M", "0:1:N")]
         [TestCase("MM", "0:2:N")]
         [TestCase("MMM", "0:3:N")]
         [TestCase("MMMM", "0:4:N")]
         public void MoveOnePositionToNorthFromStartingPosition(string input, string expected)
         {
-            string result = new MarsRover().Execute(input);
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(expected, new MarsRover().Execute(input));
         }
         #endregion
 
-        #region Movement (M) to the North (S)
-        
+        #region -> Turns direction to Right (R) from start position
+        [TestCase("R", "0:0:E")]
+        [TestCase("RR", "0:0:S")]
+        [TestCase("RRR", "0:0:W")]
+        [TestCase("RRRR", "0:0:N")]
+        public void TurnDirectionToRightFromStartingPosition(string input, string expected)
+        {
+            Assert.AreEqual(expected, new MarsRover().Execute(input));
+        }
         #endregion
     }
 }
