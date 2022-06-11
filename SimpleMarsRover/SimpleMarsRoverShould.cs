@@ -24,9 +24,13 @@ namespace SimpleMarsRover
         [TestCase("MMMM", "0:4:N")]
         public void MoveOnePositionToNorthFromStartingPosition(string input, string expected)
         {
-            Assert.AreEqual(expected, new MarsRover().Execute(input));
+            string result = new MarsRover().Execute(input);
+            Assert.AreEqual(expected, result);
         }
+        #endregion
 
+        #region Movement (M) to the North (S)
+        
         #endregion
     }
 }

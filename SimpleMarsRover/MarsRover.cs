@@ -4,11 +4,14 @@ namespace SimpleMarsRover
 {
     public class MarsRover
     {
+        private Plateu plateu;
+
         public string Execute(string input)
         {
-            if(string.IsNullOrEmpty(input)) return "0:0:N";
+            plateu = new Plateu();
+            plateu.Move(input);
 
-            return string.Format("0:{0}:N", input.Length);
+            return plateu.Print();
         }
     }
 }
