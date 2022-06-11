@@ -71,5 +71,14 @@ namespace SimpleMarsRover
             Assert.AreEqual(expected, new MarsRover().Execute(input));
         }
         #endregion
+
+        #region -> Turn around
+        [TestCase("MMMMMMMMMM", "0:0:N")]
+        [TestCase("RMMMMMMMMMML", "0:0:N")]
+        public void MoveAroundFromStartingPosition(string input, string expected)
+        {
+            Assert.AreEqual(expected, new MarsRover().Execute(input));
+        }
+        #endregion
     }
 }

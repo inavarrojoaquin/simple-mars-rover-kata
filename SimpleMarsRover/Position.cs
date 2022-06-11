@@ -20,6 +20,9 @@ namespace SimpleMarsRover
             if (direction == Directions.S.ToString()) Y -= 1;
             if (direction == Directions.W.ToString()) X -= 1;
 
+            if (X > 9) X -= 10;
+            if (Y > 9) Y -= 10;
+
             return new Position(X, Y);
         }
     }
