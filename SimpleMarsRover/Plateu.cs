@@ -23,6 +23,7 @@ namespace SimpleMarsRover
             {
                 if (input[i] == 'M') position = new Position(0, position.Y + 1);
                 if (input[i] == 'R') direction.TurnRight();
+                if (input[i] == 'L') direction.TurnLeft();
             }
         }
 

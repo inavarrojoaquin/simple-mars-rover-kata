@@ -38,5 +38,16 @@ namespace SimpleMarsRover
             Assert.AreEqual(expected, new MarsRover().Execute(input));
         }
         #endregion
+
+        #region -> Turns direction to Left (L) from start position
+        [TestCase("L", "0:0:W")]
+        [TestCase("LL", "0:0:S")]
+        [TestCase("LLL", "0:0:E")]
+        [TestCase("LLLL", "0:0:N")]
+        public void TurnDirectionToLeftFromStartingPosition(string input, string expected)
+        {
+            Assert.AreEqual(expected, new MarsRover().Execute(input));
+        }
+        #endregion
     }
 }
