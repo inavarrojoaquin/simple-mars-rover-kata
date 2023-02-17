@@ -5,7 +5,8 @@
         private Position position;
         private Direction direction;
         private string[,] board;
-        
+        private IRoverCommand command;
+
         public Rover()
         {
             board = CreateBoard();
@@ -19,10 +20,27 @@
             
             for (var i = 0; i < input.Length; i++) 
             {
-                if (input[i] == 'R') direction.TurnRight();
-                if (input[i] == 'L') direction.TurnLeft();
-                if (input[i] == 'M') position = position.Update(direction.ToString());
+                if (input[i] == 'R') command = new TurnRightCommand(this);
+                if (input[i] == 'L') command = new TurnLeftCommand(this);  
+                if (input[i] == 'M') command = new MoveForwardCommand(this);
+
+                command.Execute();
             }
+        }
+
+        public void MoveForward()
+        {
+            position = position.Update(direction.ToString());
+        }
+
+        public void TurnRight()
+        {
+            direction.TurnRight();
+        }
+
+        public void TurnLeft()
+        {
+            direction.TurnLeft();
         }
 
         private string[,] CreateBoard()
