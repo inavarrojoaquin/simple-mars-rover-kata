@@ -1,30 +1,33 @@
-﻿using System;
-
-namespace SimpleMarsRover
+﻿namespace SimpleMarsRover
 {
     public class Direction
     {
-        public string Name { get; private set; }
+        string name;
 
         public Direction()
         {
-            Name = Directions.N.ToString();            
+            name = Directions.N.ToString();            
         }
 
         public void TurnRight()
         {
-            if (Name == "N") { Name = Directions.E.ToString(); return; }
-            if (Name == "E") { Name = Directions.S.ToString(); return; }
-            if (Name == "S") { Name = Directions.W.ToString(); return; }
-            if (Name == "W") { Name = Directions.N.ToString(); return; }
+            if (name == "N") { name = Directions.E.ToString(); return; }
+            if (name == "E") { name = Directions.S.ToString(); return; }
+            if (name == "S") { name = Directions.W.ToString(); return; }
+            if (name == "W") { name = Directions.N.ToString(); return; }
         }
 
         public void TurnLeft()
         {
-            if (Name == "N") { Name = Directions.W.ToString(); return; }
-            if (Name == "W") { Name = Directions.S.ToString(); return; }
-            if (Name == "S") { Name = Directions.E.ToString(); return; }
-            if (Name == "E") { Name = Directions.N.ToString(); return; }
+            if (name == "N") { name = Directions.W.ToString(); return; }
+            if (name == "W") { name = Directions.S.ToString(); return; }
+            if (name == "S") { name = Directions.E.ToString(); return; }
+            if (name == "E") { name = Directions.N.ToString(); return; }
+        }
+
+        public override string ToString()
+        {
+            return name;
         }
     }
 

@@ -1,14 +1,12 @@
-﻿using System;
-
-namespace SimpleMarsRover
+﻿namespace SimpleMarsRover
 {
-    internal class Plateu
+    internal class Rover
     {
         private Position position;
         private Direction direction;
         private string[,] board;
         
-        public Plateu()
+        public Rover()
         {
             board = CreateBoard();
             direction = new Direction();
@@ -23,7 +21,7 @@ namespace SimpleMarsRover
             {
                 if (input[i] == 'R') direction.TurnRight();
                 if (input[i] == 'L') direction.TurnLeft();
-                if (input[i] == 'M') position = position.Update(direction.Name);
+                if (input[i] == 'M') position = position.Update(direction.ToString());
             }
         }
 
@@ -44,7 +42,7 @@ namespace SimpleMarsRover
 
         public string Print()
         {
-            return board[position.X, position.Y].ToString() + ":" + direction.Name;
+            return board[position.ToPairInt().Item1, position.ToPairInt().Item2].ToString() + ":" + direction.ToString();
         }
     }
 }

@@ -4,11 +4,11 @@ namespace SimpleMarsRover
 {
     public class MarsRover
     {
-        private Plateu plateu;
+        private Rover plateu;
 
         public string Execute(string input)
         {
-            plateu = new Plateu();
+            plateu = new Rover();
             plateu.Move(input);
 
             return plateu.Print();
