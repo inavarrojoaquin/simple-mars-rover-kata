@@ -20,10 +20,7 @@
             
             for (var i = 0; i < input.Length; i++) 
             {
-                if (input[i] == 'R') command = new TurnRightCommand(this);
-                if (input[i] == 'L') command = new TurnLeftCommand(this);  
-                if (input[i] == 'M') command = new MoveForwardCommand(this);
-
+                command = RoverCommandFactory.Create(input[i], this);
                 command.Execute();
             }
         }
