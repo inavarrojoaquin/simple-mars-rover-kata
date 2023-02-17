@@ -1,31 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\TDD\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj": {}
+    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\TDD\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj": {
+    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\TDD\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj",
+        "projectUniqueName": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj",
         "projectName": "SimpleMarsRover",
-        "projectPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\TDD\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj",
+        "projectPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj",
         "packagesPath": "C:\\Users\\vidsi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\TDD\\SimpleMarsRover\\SimpleMarsRover\\obj\\",
+        "outputPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vidsi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -36,19 +37,28 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.5.0, )"
+              "version": "[17.3.2, )"
             },
             "NUnit": {
               "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.16.1, )"
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             }
           },
           "imports": [
@@ -57,7 +67,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -66,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
