@@ -1,4 +1,6 @@
-﻿namespace SimpleMarsRover
+﻿using SimpleMarsRover.Logging;
+
+namespace SimpleMarsRover
 {
     internal class Rover
     {
@@ -6,12 +8,14 @@
         private Direction direction;
         private string[,] board;
         private IRoverCommand command;
+        private readonly ILogger logger;
 
-        public Rover()
+        public Rover(ILogger logger)
         {
             board = CreateBoard();
             direction = new Direction();
             position = new Position(0, 0);
+            this.logger = logger;
         }
 
         public void Move(string input)
@@ -28,16 +32,19 @@
         public void MoveForward()
         {
             position = position.Update(direction.ToString());
+            logger.Log("Moved Forward");
         }
 
         public void TurnRight()
         {
             direction.TurnRight();
+            logger.Log("Turned Right");
         }
 
         public void TurnLeft()
         {
             direction.TurnLeft();
+            logger.Log("Turned Left");
         }
 
         private string[,] CreateBoard()

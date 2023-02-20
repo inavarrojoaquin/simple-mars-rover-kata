@@ -1,4 +1,4 @@
-﻿using System;
+﻿using SimpleMarsRover.Logging;
 
 namespace SimpleMarsRover
 {
@@ -8,7 +8,9 @@ namespace SimpleMarsRover
 
         public string Execute(string input)
         {
-            plateu = new Rover();
+            ILogType logType = new ConsoleLog();
+            ILogger logger = new Logger(logType);
+            plateu = new Rover(logger);
             plateu.Move(input);
 
             return plateu.Print();
