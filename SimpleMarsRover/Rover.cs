@@ -1,5 +1,6 @@
 ﻿using SimpleMarsRover.Command;
 using SimpleMarsRover.Domain;
+using SimpleMarsRover.Factory.Command;
 using SimpleMarsRover.Logging;
 
 namespace SimpleMarsRover

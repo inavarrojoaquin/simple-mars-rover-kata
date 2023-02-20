@@ -1,4 +1,6 @@
-﻿namespace SimpleMarsRover.Command
+﻿using SimpleMarsRover.Command;
+
+namespace SimpleMarsRover.Factory.Command
 {
     internal class RoverCommandFactory
     {

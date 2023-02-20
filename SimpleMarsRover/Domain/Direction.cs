@@ -1,4 +1,6 @@
-﻿namespace SimpleMarsRover.Domain
+﻿using SimpleMarsRover.Factory.Domain;
+
+namespace SimpleMarsRover.Domain
 {
     public class Direction
     {
@@ -11,18 +13,12 @@
 
         public void TurnRight()
         {
-            if (name == "N") { name = Directions.E.ToString(); return; }
-            if (name == "E") { name = Directions.S.ToString(); return; }
-            if (name == "S") { name = Directions.W.ToString(); return; }
-            if (name == "W") { name = Directions.N.ToString(); return; }
+            name = DirectionFactory.TurnRigth(name);
         }
 
         public void TurnLeft()
         {
-            if (name == "N") { name = Directions.W.ToString(); return; }
-            if (name == "W") { name = Directions.S.ToString(); return; }
-            if (name == "S") { name = Directions.E.ToString(); return; }
-            if (name == "E") { name = Directions.N.ToString(); return; }
+            name = DirectionFactory.TurnLeft(name);
         }
 
         public override string ToString()
