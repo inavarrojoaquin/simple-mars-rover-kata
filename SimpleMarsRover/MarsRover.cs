@@ -1,4 +1,5 @@
-﻿using SimpleMarsRover.Logging;
+﻿using SimpleMarsRover.Domain;
+using SimpleMarsRover.Logging;
 
 namespace SimpleMarsRover
 {

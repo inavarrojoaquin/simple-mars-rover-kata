@@ -1,6 +1,4 @@
-﻿using SimpleMarsRover.Factory.Domain;
-
-namespace SimpleMarsRover.Domain
+﻿namespace SimpleMarsRover.Domain
 {
     public class Direction
     {

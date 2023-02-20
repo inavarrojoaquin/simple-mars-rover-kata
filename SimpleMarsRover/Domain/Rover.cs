@@ -1,9 +1,7 @@
-﻿using SimpleMarsRover.Command;
-using SimpleMarsRover.Domain;
-using SimpleMarsRover.Factory.Command;
+﻿using SimpleMarsRover.Domain.Command;
 using SimpleMarsRover.Logging;
 
-namespace SimpleMarsRover
+namespace SimpleMarsRover.Domain
 {
     internal class Rover
     {
@@ -24,8 +22,8 @@ namespace SimpleMarsRover
         public void Move(string input)
         {
             if (input.Length == 0) return;
-            
-            for (var i = 0; i < input.Length; i++) 
+
+            for (var i = 0; i < input.Length; i++)
             {
                 command = RoverCommandFactory.Create(input[i], this);
                 command.Execute();
@@ -53,12 +51,12 @@ namespace SimpleMarsRover
         private string[,] CreateBoard()
         {
             string[,] board = new string[10, 10];
-            
-            for (var x = 0; x < board.GetLength(0); x++) 
+
+            for (var x = 0; x < board.GetLength(0); x++)
             {
-                for (var y = 0; y < board.GetLength(1); y++) 
+                for (var y = 0; y < board.GetLength(1); y++)
                 {
-                    board[x, y] = x.ToString() +":"+ y.ToString();
+                    board[x, y] = x.ToString() + ":" + y.ToString();
                 }
             }
 

@@ -1,6 +1,4 @@
-﻿using SimpleMarsRover.Domain;
-
-namespace SimpleMarsRover.Factory.Domain
+﻿namespace SimpleMarsRover.Domain
 {
     internal class DirectionFactory
     {
@@ -10,7 +8,7 @@ namespace SimpleMarsRover.Factory.Domain
             if (name == "W") { return Directions.S.ToString(); }
             if (name == "S") { return Directions.E.ToString(); }
 
-            return name = Directions.N.ToString();
+            return Directions.N.ToString();
         }
 
         internal static string TurnRigth(string name)

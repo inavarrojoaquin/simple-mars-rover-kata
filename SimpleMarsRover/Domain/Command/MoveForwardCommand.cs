@@ -1,4 +1,4 @@
-﻿namespace SimpleMarsRover.Command
+﻿namespace SimpleMarsRover.Domain.Command
 {
     internal class MoveForwardCommand : IRoverCommand
     {
