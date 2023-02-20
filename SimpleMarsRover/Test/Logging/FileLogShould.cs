@@ -1,4 +1,6 @@
-﻿namespace SimpleMarsRover.Logging
+﻿using SimpleMarsRover.Logging;
+
+namespace SimpleMarsRover.Test.Logging
 {
     internal class FileLogShould
     {
@@ -14,11 +16,12 @@
         }
 
         [Test]
-        public void ReadAllFromFile() {
+        public void ReadAllFromFile()
+        {
 
             ILogType fileLogType = new FileLog(@"C:\tmp\rover_log.txt");
             ILogger logger = new Logger(fileLogType);
-            
+
             logger.Log(INIT_HELLO_FINISG_MSG);
 
             var output = logger.ReadAll();
@@ -28,7 +31,7 @@
             Assert.That(output.Contains("Finish"), Is.True);
         }
 
-        [Test]  
+        [Test]
         public void CleanFile()
         {
             ILogType fileLogType = new FileLog(@"C:\tmp\rover_log.txt");
@@ -37,7 +40,7 @@
             logger.Clean();
 
             string output = logger.ReadAll();
-            
+
             Assert.IsTrue(string.IsNullOrEmpty(output));
         }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleMarsRover
+namespace SimpleMarsRover.Domain
 {
     internal class Position
     {
@@ -26,7 +26,7 @@ namespace SimpleMarsRover
             return new Position(x, y);
         }
 
-        public (int,int) ToPairInt() 
+        public (int, int) ToPairInt()
         {
             return (x, y);
         }

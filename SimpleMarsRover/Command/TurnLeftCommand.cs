@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace SimpleMarsRover
+namespace SimpleMarsRover.Command
 {
     internal class TurnLeftCommand : IRoverCommand
     {

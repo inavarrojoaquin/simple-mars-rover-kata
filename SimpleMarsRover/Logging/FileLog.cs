@@ -1,6 +1,4 @@
-﻿using NUnit.Framework.Constraints;
-
-namespace SimpleMarsRover.Logging
+﻿namespace SimpleMarsRover.Logging
 {
     internal class FileLog : ILogType
     {
@@ -13,7 +11,6 @@ namespace SimpleMarsRover.Logging
         public void Log(string msj)
         {
             File.AppendAllText(filePath, msj);
-            //File.WriteAllText(filePath, msj);
         }
 
         public string ReadAll()

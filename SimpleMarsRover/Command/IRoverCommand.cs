@@ -1,4 +1,4 @@
-﻿namespace SimpleMarsRover
+﻿namespace SimpleMarsRover.Command
 {
     internal interface IRoverCommand
     {

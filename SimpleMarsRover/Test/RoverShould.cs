@@ -1,6 +1,6 @@
 ﻿using SimpleMarsRover.Logging;
 
-namespace SimpleMarsRover
+namespace SimpleMarsRover.Test
 {
     internal class RoverShould
     {

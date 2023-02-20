@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace SimpleMarsRover
+namespace SimpleMarsRover.Test
 {
     public class SimpleMarsRoverShould
     {

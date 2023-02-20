@@ -1,4 +1,4 @@
-﻿namespace SimpleMarsRover
+﻿namespace SimpleMarsRover.Domain
 {
     public class Direction
     {
@@ -6,7 +6,7 @@
 
         public Direction()
         {
-            name = Directions.N.ToString();            
+            name = Directions.N.ToString();
         }
 
         public void TurnRight()

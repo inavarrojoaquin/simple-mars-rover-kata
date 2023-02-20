@@ -1,15 +1,18 @@
-﻿namespace SimpleMarsRover.Logging
+﻿using SimpleMarsRover.Logging;
+
+namespace SimpleMarsRover.Test.Logging
 {
     internal class ConsoleLogShould
     {
         private const string INIT_HELLO_FINISG_MSG = "Init...\nHello World!\nFinish!\n";
 
         [Test]
-        public void LoggingMessageToConsole() {
+        public void LoggingMessageToConsole()
+        {
 
             ILogType consoleLogType = new ConsoleLog();
             ILogger logger = new Logger(consoleLogType);
-            
+
             Assert.DoesNotThrow(() => logger.Log(INIT_HELLO_FINISG_MSG));
         }
 

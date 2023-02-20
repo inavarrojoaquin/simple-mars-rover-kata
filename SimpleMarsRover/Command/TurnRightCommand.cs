@@ -1,4 +1,4 @@
-﻿namespace SimpleMarsRover
+﻿namespace SimpleMarsRover.Command
 {
     internal class TurnRightCommand : IRoverCommand
     {
