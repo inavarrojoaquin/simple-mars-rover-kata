@@ -5,23 +5,23 @@ namespace SimpleMarsRover.Test.Logging
     internal class FileLogShould
     {
         private const string INIT_HELLO_FINISG_MSG = "Init...\nHello World!\nFinish!\n";
+        private FileLog logger;
+
+        [SetUp]
+        public void SetUp()
+        {
+            logger = new FileLog(@"C:\tmp\rover_log.txt");
+        }
 
         [Test]
         public void LogginMessagesToFile()
         {
-            ILogType fileLogType = new FileLog(@"C:\tmp\rover_log.txt");
-            ILogger logger = new Logger(fileLogType);
-
             Assert.DoesNotThrow(() => logger.Log(INIT_HELLO_FINISG_MSG));
         }
 
         [Test]
         public void ReadAllFromFile()
         {
-
-            ILogType fileLogType = new FileLog(@"C:\tmp\rover_log.txt");
-            ILogger logger = new Logger(fileLogType);
-
             logger.Log(INIT_HELLO_FINISG_MSG);
 
             var output = logger.ReadAll();
@@ -34,9 +34,6 @@ namespace SimpleMarsRover.Test.Logging
         [Test]
         public void CleanFile()
         {
-            ILogType fileLogType = new FileLog(@"C:\tmp\rover_log.txt");
-            ILogger logger = new Logger(fileLogType);
-
             logger.Clean();
 
             string output = logger.ReadAll();
@@ -47,9 +44,6 @@ namespace SimpleMarsRover.Test.Logging
         [Test]
         public void GetEmptyStringIfFileDoesNotExists()
         {
-            ILogType fileLogType = new FileLog(@"C:\tmp\rover_log.txt");
-            ILogger logger = new Logger(fileLogType);
-
             logger.Clean();
 
             string output = logger.ReadAll();

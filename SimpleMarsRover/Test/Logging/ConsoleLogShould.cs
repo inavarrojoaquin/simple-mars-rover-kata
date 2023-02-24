@@ -5,23 +5,23 @@ namespace SimpleMarsRover.Test.Logging
     internal class ConsoleLogShould
     {
         private const string INIT_HELLO_FINISG_MSG = "Init...\nHello World!\nFinish!\n";
+        private ConsoleLog logger;
+
+        [SetUp]
+        public void SetUp() 
+        {
+            logger = new ConsoleLog();
+        }
 
         [Test]
         public void LoggingMessageToConsole()
         {
-
-            ILogType consoleLogType = new ConsoleLog();
-            ILogger logger = new Logger(consoleLogType);
-
             Assert.DoesNotThrow(() => logger.Log(INIT_HELLO_FINISG_MSG));
         }
 
         [Test]
         public void ReadAllFromConsole()
         {
-            ILogType fileLogType = new ConsoleLog();
-            ILogger logger = new Logger(fileLogType);
-
             logger.Log(INIT_HELLO_FINISG_MSG);
 
             var output = logger.ReadAll();
@@ -34,9 +34,6 @@ namespace SimpleMarsRover.Test.Logging
         [Test]
         public void CleanConsole()
         {
-            ILogType fileLogType = new ConsoleLog();
-            ILogger logger = new Logger(fileLogType);
-
             logger.Clean();
 
             string output = logger.ReadAll();

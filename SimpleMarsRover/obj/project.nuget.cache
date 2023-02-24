@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0ui7gdtHZXovdJSrGg0uiP9P9wOv87GD0cnAs9IBeY/1Bncq+lQkuoQGmlb6r0FE19YLQJwsH4tahJB3/LQPhQ==",
+  "dgSpecHash": "IkoARXYGE069jol4cCixNd6mZXgFs7Jij52otCGwFdEjGr5zDhICZuU07aKbnP1g+H2ZmprXHjPmnmPPQ35SLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj",
+  "projectFilePath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRoverCQRS\\SimpleMarsRover\\SimpleMarsRover.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vidsi\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\vidsi\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",

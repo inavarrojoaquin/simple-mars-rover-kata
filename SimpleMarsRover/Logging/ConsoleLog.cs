@@ -1,8 +1,6 @@
-﻿using System.IO;
-
-namespace SimpleMarsRover.Logging
+﻿namespace SimpleMarsRover.Logging
 {
-    internal class ConsoleLog : ILogType
+    internal class ConsoleLog : ILogger
     {
         private StringWriter stringWriter;
 

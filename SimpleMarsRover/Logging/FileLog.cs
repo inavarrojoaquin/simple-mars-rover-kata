@@ -1,6 +1,6 @@
 ﻿namespace SimpleMarsRover.Logging
 {
-    internal class FileLog : ILogType
+    internal class FileLog : ILogger
     {
         private string filePath;
 

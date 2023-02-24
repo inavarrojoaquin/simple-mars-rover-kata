@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj": {}
+    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRoverCQRS\\SimpleMarsRover\\SimpleMarsRover.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj": {
+    "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRoverCQRS\\SimpleMarsRover\\SimpleMarsRover.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj",
+        "projectUniqueName": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRoverCQRS\\SimpleMarsRover\\SimpleMarsRover.csproj",
         "projectName": "SimpleMarsRover",
-        "projectPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\SimpleMarsRover.csproj",
+        "projectPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRoverCQRS\\SimpleMarsRover\\SimpleMarsRover.csproj",
         "packagesPath": "C:\\Users\\vidsi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRover\\SimpleMarsRover\\obj\\",
+        "outputPath": "C:\\Users\\vidsi\\Documents\\OneDrive\\Documentos\\05Estudio-Certificados\\Training_Marcos\\SimpleMarsRoverCQRS\\SimpleMarsRover\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vidsi\\AppData\\Roaming\\NuGet\\NuGet.Config",
