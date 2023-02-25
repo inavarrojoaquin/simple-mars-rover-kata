@@ -1,19 +1,7 @@
-﻿using System.Windows.Input;
-
-namespace SimpleMarsRover.Domain.Command
+﻿namespace SimpleMarsRover.Domain.Command
 {
-    internal class TurnLeftCommand : IRoverCommand
+    internal class TurnLeftCommand : ICommand
     {
-        private Rover rover;
-
-        public TurnLeftCommand(Rover rover)
-        {
-            this.rover = rover;
-        }
-
-        public void Execute()
-        {
-            rover.TurnLeft();
-        }
+        public string TurnLeftGuid { get; set; }
     }
 }

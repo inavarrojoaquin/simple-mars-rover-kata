@@ -8,7 +8,6 @@ namespace SimpleMarsRover.Domain
         private Position position;
         private Direction direction;
         private string[,] board;
-        private IRoverCommand command;
         private readonly ILogger logger;
 
         public Rover(ILogger logger)
@@ -25,27 +24,43 @@ namespace SimpleMarsRover.Domain
 
             for (var i = 0; i < input.Length; i++)
             {
-                command = RoverCommandFactory.Create(input[i], this);
-                command.Execute();
+                ICommand command = CommandFactory(input[i]);
+                ICommandHandler commandHandler = CommandHandlerFactory(command.GetType());
+                commandHandler.Handle(command);
             }
         }
 
+        private ICommandHandler CommandHandlerFactory(Type commandType)
+        {
+            if (commandType == typeof(TurnRightCommand))
+                return new TurnRightCommandHandler(this, logger);
+            if (commandType == typeof(TurnLeftCommand))
+                return new TurnLeftCommandHandler(this, logger);
+
+            return new MoveForwardCommandHandler(this, logger);
+        }
+
+        private ICommand CommandFactory(char input)
+        {
+            if (input == 'R') return new TurnRightCommand();
+            if (input == 'L') return new TurnLeftCommand();
+
+            return new MoveForwardCommand();
+        }
+        
         public void MoveForward()
         {
             position = position.Update(direction.ToString());
-            logger.Log("Moved Forward");
         }
 
         public void TurnRight()
         {
             direction.TurnRight();
-            logger.Log("Turned Right");
         }
 
         public void TurnLeft()
         {
             direction.TurnLeft();
-            logger.Log("Turned Left");
         }
 
         private string[,] CreateBoard()

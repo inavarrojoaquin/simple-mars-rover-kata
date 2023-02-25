@@ -1,7 +1,7 @@
 ﻿namespace SimpleMarsRover.Domain.Command
 {
-    internal interface IRoverCommand
+    public interface ICommandHandler<T> : ICommandHandler where T : ICommand
     {
-        void Execute();
+        void Handle(T command);
     }
 }

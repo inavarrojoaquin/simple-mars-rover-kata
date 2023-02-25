@@ -1,17 +1,7 @@
 ﻿namespace SimpleMarsRover.Domain.Command
 {
-    internal class TurnRightCommand : IRoverCommand
+    internal class TurnRightCommand : ICommand
     {
-        private Rover rover;
-
-        public TurnRightCommand(Rover rover)
-        {
-            this.rover = rover;
-        }
-
-        public void Execute()
-        {
-            rover.TurnRight();
-        }
+        public string TurnRightGuid { get; set; }
     }
 }
