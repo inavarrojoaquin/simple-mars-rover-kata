@@ -2,7 +2,7 @@
 
 namespace SimpleMarsRover.Domain.Command
 {
-    internal class TurnRightCommandHandler : ICommandHandler<TurnRightCommand>
+    public class TurnRightCommandHandler : ICommandHandler<TurnRightCommand>
     {
         private Rover rover;
         private readonly ILogger logger;

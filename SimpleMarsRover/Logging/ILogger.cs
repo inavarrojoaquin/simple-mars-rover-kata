@@ -1,6 +1,6 @@
 ﻿namespace SimpleMarsRover.Logging
 {
-    internal interface ILogger
+    public interface ILogger
     {
         void Clean();
         void Log(string logMsg);
