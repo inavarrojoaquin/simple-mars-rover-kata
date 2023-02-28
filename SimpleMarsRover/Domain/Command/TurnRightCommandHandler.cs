@@ -4,10 +4,10 @@ namespace SimpleMarsRover.Domain.Command
 {
     public class TurnRightCommandHandler : ICommandHandler<TurnRightCommand>
     {
-        private Rover rover;
+        private IRover rover;
         private readonly ILogger logger;
 
-        public TurnRightCommandHandler(Rover rover, ILogger logger)
+        public TurnRightCommandHandler(IRover rover, ILogger logger)
         {
             this.rover = rover;
             this.logger = logger;

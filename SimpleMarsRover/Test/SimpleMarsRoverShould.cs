@@ -2,11 +2,6 @@ namespace SimpleMarsRover.Test
 {
     public class SimpleMarsRoverShould
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         #region The starting position 0:0:N
         [Test]
         public void StartAtCeroCeroNorth()

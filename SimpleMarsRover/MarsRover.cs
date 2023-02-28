@@ -9,7 +9,10 @@ namespace SimpleMarsRover
         public string Execute(string input)
         {
             ILogger logger = new ConsoleLog();
-            Rover rover = new Rover();
+            //IRover rover = new Rover();
+
+            ILunarRover lunarRover = new LunarRover(0,0); 
+            LunarRoverAdapter rover = new LunarRoverAdapter(lunarRover);
 
             CommandBus commandBus = new CommandBus();
             commandBus.Register(new TurnRightCommandHandler(rover, logger));

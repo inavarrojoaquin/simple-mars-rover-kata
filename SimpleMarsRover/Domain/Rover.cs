@@ -1,6 +1,6 @@
 ﻿namespace SimpleMarsRover.Domain
 {
-    public class Rover
+    public class Rover : IRover
     {
         private Position position;
         private Direction direction;
@@ -28,6 +28,11 @@
             direction.TurnLeft();
         }
 
+        public string Print()
+        {
+            return board[position.ToPairInt().Item1, position.ToPairInt().Item2].ToString() + ":" + direction.ToString();
+        }
+
         private string[,] CreateBoard()
         {
             string[,] board = new string[10, 10];
@@ -41,11 +46,6 @@
             }
 
             return board;
-        }
-
-        public string Print()
-        {
-            return board[position.ToPairInt().Item1, position.ToPairInt().Item2].ToString() + ":" + direction.ToString();
         }
     }
 }

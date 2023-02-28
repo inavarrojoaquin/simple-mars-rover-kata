@@ -4,10 +4,10 @@ namespace SimpleMarsRover.Domain.Command
 {
     internal class MoveForwardCommandHandler : ICommandHandler<MoveForwardCommand>
     {
-        private Rover rover;
+        private IRover rover;
         private readonly ILogger logger;
 
-        public MoveForwardCommandHandler(Rover rover, ILogger logger)
+        public MoveForwardCommandHandler(IRover rover, ILogger logger)
         {
             this.rover = rover;
             this.logger = logger;
