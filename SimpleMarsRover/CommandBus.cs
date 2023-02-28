@@ -12,9 +12,7 @@ namespace SimpleMarsRover
         }
         internal void Execute<T>(T command) where T: ICommand
         {
-            var commandHandlerFromDictionary = handlers[command.GetType()];
-            ((ICommandHandler<T>)commandHandlerFromDictionary).Handle(command);
-            //commandHandler.Handle(command);
+            ((ICommandHandler<T>)handlers[command.GetType()]).Handle(command);
         }
 
         internal void Register<T>(ICommandHandler<T> commandHandler) where T : ICommand
