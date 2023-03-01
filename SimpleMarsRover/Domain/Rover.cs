@@ -3,13 +3,13 @@
     public class Rover : IRover
     {
         private Position position;
-        private Direction direction;
+        private IDirection direction;
         private string[,] board;
 
         public Rover()
         {
             board = CreateBoard();
-            direction = new Direction();
+            direction = new NorthDirection();
             position = new Position(0, 0);
         }
         
@@ -20,12 +20,12 @@
 
         public void TurnRight()
         {
-            direction.TurnRight();
+           direction = direction.TurnRight();
         }
 
         public void TurnLeft()
         {
-            direction.TurnLeft();
+            direction = direction.TurnLeft();
         }
 
         public string Print()

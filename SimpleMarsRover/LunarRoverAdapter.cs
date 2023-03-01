@@ -5,12 +5,12 @@ namespace SimpleMarsRover
     public class LunarRoverAdapter : IRover
     {
         private ILunarRover lunarRover;
-        private Direction direction;
+        private IDirection direction;
 
         public LunarRoverAdapter(ILunarRover lunarRover)
         {
             this.lunarRover = lunarRover;
-            direction = new Direction();
+            direction = new NorthDirection();
         }
 
         public void MoveForward()
@@ -30,12 +30,12 @@ namespace SimpleMarsRover
 
         public void TurnLeft()
         {
-            direction.TurnLeft();
+           direction = direction.TurnLeft();
         }
 
         public void TurnRight()
         {
-            direction.TurnRight();
+           direction = direction.TurnRight();
         }
         
         public string Print()
