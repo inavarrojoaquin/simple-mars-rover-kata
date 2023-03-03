@@ -2,7 +2,7 @@
 
 namespace SimpleMarsRover.Domain.Command
 {
-    internal class TurnLeftCommandHandler : ICommandHandler<TurnLeftCommand>
+    internal class TurnLeftCommandHandler : BaseCommandHandler // ICommandHandlerT<TurnLeftCommand>
     {
         private IRover rover;
         private readonly ILogger logger;
@@ -13,10 +13,17 @@ namespace SimpleMarsRover.Domain.Command
             this.logger = logger;
         }
 
-        public void Handle(TurnLeftCommand command)
+
+        public override void Handle(char input)
         {
-            rover.TurnLeft();
-            logger.Log(string.Format("TurnLeft with Guid {0}", command.TurnLeftGuid));
+            if (input == 'L')
+            {
+                rover.TurnLeft();
+                //logger.Log(string.Format("TurnLeft with Guid {0}", command.TurnLeftGuid));
+                return;
+            }
+
+            nextHandler.Handle(input);
         }
     }
 }

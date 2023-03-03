@@ -2,7 +2,7 @@
 
 namespace SimpleMarsRover.Domain.Command
 {
-    internal class MoveForwardCommandHandler : ICommandHandler<MoveForwardCommand>
+    internal class MoveForwardCommandHandler : BaseCommandHandler // ICommandHandlerT<MoveForwardCommand>
     {
         private IRover rover;
         private readonly ILogger logger;
@@ -13,10 +13,16 @@ namespace SimpleMarsRover.Domain.Command
             this.logger = logger;
         }
 
-        public void Handle(MoveForwardCommand command)
+        public override void Handle(char input)
         {
-            rover.MoveForward();
-            logger.Log(string.Format("MoveForward with Guid {0}", command.MoveForwardGuid));
+            if (input == 'M')
+            {
+                rover.MoveForward();
+                //logger.Log(string.Format("MoveForward with Guid {0}", command.MoveForwardGuid));
+                return;
+            }
+
+            nextHandler.Handle(input);
         }
     }
 }

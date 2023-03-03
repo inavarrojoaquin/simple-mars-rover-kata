@@ -1,7 +1,8 @@
 ﻿namespace SimpleMarsRover.Domain.Command
 {
-    public interface ICommandHandler<T> where T : ICommand
+    public interface ICommandHandler
     {
-        void Handle(T command);
+        void SetNextHandler(ICommandHandler nextHandler);
+        void Handle(char input);
     }
 }
