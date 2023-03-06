@@ -4,40 +4,20 @@ namespace SimpleMarsRover
 {
     public class CommandBus
     {
-        private IDictionary<string, object> handlers;
+        private IDictionary<Type, object> handlers;
 
         public CommandBus()
         {
-            //handlers = new Dictionary<Type, object>();
-            handlers = new Dictionary<string, object>();
+            handlers = new Dictionary<Type, object>();
         }
-
-        internal void Execute(string position, char input)
+        internal void Execute<T>(T command) where T: ICommand
         {
-            ((BaseCommandHandler)handlers[position]).Handle(input);
-            // cadena de acciones
-            // 1 - Log init
-            // 2 - Command execute
-            // 3 - Log finish
-            
+            ((ICommandHandler<T>)handlers[command.GetType()]).Handle(command);
         }
 
-        internal void Register(string position, BaseCommandHandler commandHandler)
+        internal void Register<T>(ICommandHandler<T> commandHandler) where T : ICommand
         {
-            handlers.Add(position, commandHandler);
+            handlers.Add(typeof(T), commandHandler);
         }
-        //internal void Execute<T>(T command) where T: ICommand
-        //{
-        //    // cadena de acciones
-        //    // 1 - Log init
-        //    // 2 - Command execute
-        //    // 3 - Log finish
-        //    ((ICommandHandler<T>)handlers[command.GetType()]).Handle(command);
-        //}
-
-        //internal void Register<T>(ICommandHandler<T> commandHandler) where T : ICommand
-        //{
-        //    handlers.Add(typeof(T), commandHandler);
-        //}
     }
 }
