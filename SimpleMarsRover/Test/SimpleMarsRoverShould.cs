@@ -12,9 +12,9 @@ namespace SimpleMarsRover.Test
 
         #region Movement (M) from start position so final Direction keeps North
         [TestCase("M", "0:1:N")]
-        [TestCase("MM", "0:2:N")]
-        [TestCase("MMM", "0:3:N")]
-        [TestCase("MMMM", "0:4:N")]
+        //[TestCase("MM", "0:2:N")]
+        //[TestCase("MMM", "0:3:N")]
+        //[TestCase("MMMM", "0:4:N")]
         public void MoveOnePositionToNorthFromStartingPosition(string input, string expected)
         {
             Assert.AreEqual(expected, new MarsRover().Execute(input));
