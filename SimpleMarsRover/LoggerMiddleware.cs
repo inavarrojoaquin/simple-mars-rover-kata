@@ -6,18 +6,18 @@ namespace SimpleMarsRover
     public class LoggerMiddleware<T> : IMiddleware<T> where T : ICommand
     {
         private ILogger logger;
-        private readonly CommandHandlerMiddleware<T> commandHandlerMiddlware;
+        private readonly IMiddleware<T> middlware;
 
-        public LoggerMiddleware(ILogger logger, CommandHandlerMiddleware<T> commandHandlerMiddlware)
+        public LoggerMiddleware(ILogger logger, IMiddleware<T> middleware)
         {
             this.logger = logger;
-            this.commandHandlerMiddlware = commandHandlerMiddlware;
+            this.middlware = middleware;
         }
 
         public void Handle(T command)
         {
             logger.Log("LoggerMiddleware: " + command.GetType() + "\n");
-            commandHandlerMiddlware.Handle(command);
+            middlware.Handle(command);
         }
     }
 }
